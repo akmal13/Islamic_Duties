@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f4f4f4">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <Button
+            android:id="@+id/MapBtn"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:text="Maps"
+            />
+
+        <TextClock
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="80sp"
+            android:text="16.30"
+            android:textSize="50sp"
+            android:id="@+id/Jamsekarang"
+            android:format24Hour="@null"
+            android:format12Hour="hh:mm"
+            android:layout_below="@+id/MapBtn"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/Jamsekarang"
+            android:textSize="40sp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/Jamsubuh"
+            />
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="50sp"
+            android:layout_toEndOf="@id/Jamsubuh"
+            android:text="Subuh"
+            android:id="@+id/Textsubuh"
+            android:textColor="#000"
+            android:layout_marginLeft="20sp"
+            android:layout_below="@id/Jamsekarang"
+            android:textSize="40sp"/>
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:id="@+id/JamZuhur"
+            android:textSize="40sp"
+            android:layout_below="@id/Jamsubuh"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="50sp"
+            android:layout_toEndOf="@id/JamZuhur"
+            android:layout_below="@id/Textsubuh"
+            android:layout_marginTop="10dp"
+            android:id="@+id/TextZuhur"
+            android:text="Zuhur"
+            android:textSize="40sp"
+            android:layout_marginLeft="20sp"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:id="@+id/JamAshar"
+            android:textSize="40sp"
+            android:layout_below="@id/JamZuhur"
+
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="50sp"
+            android:layout_toEndOf="@id/JamAshar"
+            android:layout_below="@id/TextZuhur"
+            android:layout_marginTop="10dp"
+            android:id="@+id/TextAshar"
+            android:text="Ashar"
+            android:textSize="40sp"
+            android:layout_marginLeft="20sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:id="@+id/JamMaghrib"
+            android:textSize="40sp"
+            android:layout_below="@id/JamAshar"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="50sp"
+            android:layout_toEndOf="@id/JamMaghrib"
+            android:layout_below="@id/TextAshar"
+            android:layout_marginTop="10dp"
+            android:id="@+id/TextMaghrib"
+            android:text="Maghrib"
+            android:textSize="40sp"
+            android:layout_marginLeft="20sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="50sp"
+            android:id="@+id/JamIsya"
+            android:textSize="40sp"
+            android:layout_below="@id/JamMaghrib"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="300sp"
+            android:layout_height="50sp"
+            android:layout_toEndOf="@id/JamIsya"
+            android:layout_below="@id/TextMaghrib"
+            android:layout_marginTop="10dp"
+            android:id="@+id/TextIsya"
+            android:text="Isya"
+            android:textSize="40sp"
+            android:layout_marginLeft="20sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/JamIsya"
+            android:layout_marginTop="20dp"
+            android:text="Zakat"
+            android:textSize="50sp"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/titleZakat"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Zakat Penghasilan"
+            android:textSize="25sp"
+            android:layout_below="@+id/titleZakat"
+            android:textColor="#000"
+            android:id="@+id/titlezakatpeng"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:hint="Masukkan Gaji"
+            android:textColorHint="#000"
+            android:textColor="#000"
+            android:id="@+id/inputgaji"
+            android:layout_below="@id/titlezakatpeng"
+            android:gravity="left"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/inputgaji"
+            android:layout_toRightOf="@+id/inputgaji"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/titleZakat"
+            android:text="Tanggal Gajian"
+            android:id="@+id/inputjadwalgaji"
+            android:textSize="10sp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tulZakatpeng"
+            android:layout_marginLeft="10dp"
+            android:text="Deadline "
+            android:textSize="20sp"
+            android:id="@+id/tuldeadlinepeng"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hasilZakat"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:id="@+id/deadlinezakatpeng"
+            android:layout_below="@+id/tulZakatpeng"
+            android:layout_marginTop="10dp"
+            android:text="Isilah Tanggal"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/inputgaji"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:text="Per Bulan"
+            android:id="@+id/tulZakatpeng"
+
+            />
+
+        <TextView
+            android:id="@+id/hasilZakat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputgaji"
+            android:layout_toEndOf="@id/tulZakatpeng"
+            android:gravity="right"
+            android:text="Rp. 0"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Per Tahun"
+            android:layout_below="@id/tuldeadlinepeng"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/zakpertah"/>
+
+        <TextView
+            android:id="@+id/hasilZakattah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/deadlinezakatpeng"
+            android:layout_alignLeft="@+id/deadlinezakatpeng"
+            android:layout_alignBottom="@id/zakpertah"
+            android:layout_alignTop="@+id/zakpertah"
+            android:layout_toEndOf="@id/zakpertah"
+            android:gravity="right"
+            android:text="Rp. 0"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/zakpertah"
+            android:text="Deadline"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/deadlinezakatpengtah"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/hasilZakat"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:id="@+id/deadlinezakatpengtahnilai"
+            android:layout_alignTop="@+id/deadlinezakatpengtah"
+            android:layout_alignBottom="@+id/deadlinezakatpengtah"
+            android:layout_below="@+id/tulZakatpeng"
+            android:text="Isilah Tanggal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Zakat Fitrah"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="25sp"
+            android:layout_below="@+id/deadlinezakatpengtah"
+            android:textColor="#000"
+            android:id="@+id/titlezakatfit"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/titlezakatfit"
+            android:hint="Jumlah Anggota Keluarga"
+            android:layout_marginTop="0dp"
+            android:textColorHint="#000"
+            android:id="@+id/inputbankeluarga"
+            android:layout_marginBottom="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputbankeluarga"
+            android:text="Zakat Fitrah"
+            android:textSize="20dp"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/hasilZakat"
+            android:text="3.5 Liter"
+            android:textColor="#000"
+            android:layout_below="@id/inputbankeluarga"
+            android:textSize="20dp"
+            android:id="@+id/outfitrahliter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/outfitrahliter"
+            android:layout_below="@id/outfitrahliter"
+            android:text="2.7 Kilogram"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/outfitrahkilo"
+            android:textColor="#000"/>
+
+    </RelativeLayout>
+
+
+</ScrollView>
