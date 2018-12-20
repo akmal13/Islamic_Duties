@@ -3,6 +3,8 @@ package com.example.akmal_pc.islamic_duties;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
@@ -28,7 +30,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
@@ -226,4 +231,5 @@ public class SplashScreen extends AppCompatActivity {
         queue.add(JOReq);
 
     }
+
 }
