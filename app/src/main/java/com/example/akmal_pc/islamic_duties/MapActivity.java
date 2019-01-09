@@ -2,6 +2,7 @@ package com.example.akmal_pc.islamic_duties;
 
 import android.*;
 import android.Manifest;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -68,21 +69,19 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 15f;
-    private int PROXIMITY_RADIUS = 1000;
 
     double latitude;
     double longitude;
 
-    //widgets
     private ImageView mGps;
 
-    //vars
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         mGps = (ImageView) findViewById(R.id.ic_gps);
@@ -103,9 +102,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         });
 
         hideSoftKeyboard();
-        MarkerOptions opsi = new MarkerOptions().position(new LatLng(-6.363371,106.825025)).title("Musholla FTUI");
-        mMap.addMarker(opsi);
-        //geoLocate(0.0,0.0);
     }
 
 
@@ -136,6 +132,19 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                                 DataTransfer[1] = url;
                                 GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
                                 getNearbyPlacesData.execute(DataTransfer);
+
+
+                            }catch (NullPointerException e){Log.e("Masuk masjid","Tidak dapat");}
+
+                            try{
+                                String url = getUrl(latitude, longitude, "mushola");
+                                Object[] DataTransfer = new Object[2];
+                                DataTransfer[0] = mMap;
+                                DataTransfer[1] = url;
+                                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+                                getNearbyPlacesData.execute(DataTransfer);
+
+
                             }catch (NullPointerException e){Log.e("Masuk masjid","Tidak dapat");}
 
 
@@ -217,7 +226,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     }
                     Log.d(TAG, "onRequestPermissionsResult: permission granted");
                     mLocationPermissionsGranted = true;
-                    //initialize our map
                     initMap();
                 }
             }
@@ -229,16 +237,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
     private String getUrl(double latitude, double longitude, String nearbyPlace) {
-
-        StringBuilder googlePlacesUrl = new StringBuilder("https://maps.googleapis.com/maps/api/place/nearbysearch/json?");
-        googlePlacesUrl.append("location=" + latitude + "," + longitude);
-        googlePlacesUrl.append("&radius=" + PROXIMITY_RADIUS);
-        googlePlacesUrl.append("&type=" + nearbyPlace);
-        googlePlacesUrl.append("&sensor=true");
-        googlePlacesUrl.append("&key=" + "AIzaSyATuUiZUkEc_UgHuqsBJa1oqaODI-3mLs0");
-        Log.d("getUrl", googlePlacesUrl.toString());
-        return (googlePlacesUrl.toString());
+        String goog = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+latitude+","+longitude+"&radius=1000&keyword="+nearbyPlace+"&key=AIzaSyDscPC7ciOxF5K305AuolTwvI76L7gSAto";
+        Log.d("getUrl", goog);
+        return (goog);
     }
-
 
 }

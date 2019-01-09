@@ -42,10 +42,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         auth = FirebaseAuth.getInstance();
-        //if (auth.getCurrentUser() != null) {
-        //    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-       //     finish();
-        //}
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         final EditText emailInput = (EditText) findViewById(R.id.emailInput);
@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         registerClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LoginActivity.this.startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                LoginActivity.this.startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
 
             }
         });

@@ -1,258 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#000"
+
+    >
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#f4f4f4">
+
+    >
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        tools:ignore="ExtraText">
 
-        <Button
-            android:id="@+id/MapBtn"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="67dp"
-            android:text="Maps"
-            />
+            android:layout_height="830dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/backgroundfix"
+            android:foregroundGravity="top"/>
+
+
+        <TextView
+            android:id="@+id/MapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="537dp"
+            android:text="Mosque and Musholla Locator"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
 
         <TextClock
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="80sp"
-            android:text="16.30"
-            android:textSize="50sp"
             android:id="@+id/Jamsekarang"
-            android:format24Hour="@null"
-            android:format12Hour="hh:mm"
-            android:layout_below="@+id/MapBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            />
+            android:format12Hour="hh:mm"
+            android:format24Hour="@null"
+            android:gravity="center"
+            android:text="16.30"
+            android:textColor="#00a702"
+            android:textSize="80sp" />
 
         <TextView
-            android:layout_width="200sp"
-            android:layout_height="50sp"
-            android:layout_below="@id/Jamsekarang"
-            android:textSize="40sp"
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"
             android:id="@+id/Jamsubuh"
-            />
-
-        <TextView
-            android:layout_width="300sp"
+            android:layout_width="100sp"
             android:layout_height="50sp"
-            android:layout_toEndOf="@id/Jamsubuh"
-            android:text="Subuh"
-            android:id="@+id/Textsubuh"
-            android:textColor="#000"
-            android:layout_marginLeft="20sp"
             android:layout_below="@id/Jamsekarang"
-            android:textSize="40sp"/>
+            android:layout_marginTop="57sp"
+            android:layout_marginStart="240sp"
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
-            android:layout_width="200sp"
+            android:id="@+id/Textsubuh"
+            android:layout_width="100sp"
             android:layout_height="50sp"
+            android:layout_below="@id/Jamsekarang"
+            android:layout_marginTop="60sp"
+            android:layout_marginStart="100sp"
+            android:text="Subuh"
+            android:textColor="#737373"
+            android:textSize="22sp" />
+
+        <TextView
             android:id="@+id/JamZuhur"
-            android:textSize="40sp"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
             android:layout_below="@id/Jamsubuh"
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            />
+            android:layout_marginStart="240sp"
+            android:layout_marginTop="11sp"
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
-            android:layout_width="300sp"
-            android:layout_height="50sp"
-            android:layout_toEndOf="@id/JamZuhur"
-            android:layout_below="@id/Textsubuh"
-            android:layout_marginTop="10dp"
             android:id="@+id/TextZuhur"
-            android:text="Zuhur"
-            android:textSize="40sp"
-            android:layout_marginLeft="20sp"
-            android:textColor="#000"
-            />
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/Textsubuh"
+            android:layout_marginStart="100sp"
+            android:layout_marginTop="11sp"
+            android:text="Dzuhur"
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
-            android:layout_width="200sp"
-            android:layout_height="50sp"
             android:id="@+id/JamAshar"
-            android:textSize="40sp"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
             android:layout_below="@id/JamZuhur"
-
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginStart="240sp"
+            android:layout_marginTop="11sp"
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
-            android:layout_width="300sp"
-            android:layout_height="50sp"
-            android:layout_toEndOf="@id/JamAshar"
-            android:layout_below="@id/TextZuhur"
-            android:layout_marginTop="10dp"
             android:id="@+id/TextAshar"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/TextZuhur"
+            android:layout_marginStart="100sp"
+            android:layout_marginTop="11sp"
             android:text="Ashar"
-            android:textSize="40sp"
-            android:layout_marginLeft="20sp"
-            android:textColor="#000" />
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
-            android:layout_width="200sp"
-            android:layout_height="50sp"
             android:id="@+id/JamMaghrib"
-            android:textSize="40sp"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
             android:layout_below="@id/JamAshar"
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginStart="240sp"
+            android:layout_marginTop="12sp"
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
-            android:layout_width="300sp"
-            android:layout_height="50sp"
-            android:layout_toEndOf="@id/JamMaghrib"
-            android:layout_below="@id/TextAshar"
-            android:layout_marginTop="10dp"
             android:id="@+id/TextMaghrib"
+            android:layout_width="100dp"
+            android:layout_height="50sp"
+            android:layout_below="@id/TextAshar"
+            android:layout_marginStart="100sp"
+            android:layout_marginTop="12sp"
             android:text="Maghrib"
-            android:textSize="40sp"
-            android:layout_marginLeft="20sp"
-            android:textColor="#000" />
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
-            android:layout_width="200sp"
-            android:layout_height="50sp"
             android:id="@+id/JamIsya"
-            android:textSize="40sp"
-            android:layout_below="@id/JamMaghrib"
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:layout_width="300sp"
+            android:layout_width="100sp"
             android:layout_height="50sp"
-            android:layout_toEndOf="@id/JamIsya"
-            android:layout_below="@id/TextMaghrib"
-            android:layout_marginTop="10dp"
-            android:id="@+id/TextIsya"
-            android:text="Isya"
-            android:textSize="40sp"
-            android:layout_marginLeft="20sp"
-            android:textColor="#000" />
+            android:layout_below="@id/JamMaghrib"
+            android:layout_marginStart="240sp"
+            android:layout_marginTop="11sp"
+            android:textColor="#737373"
+            android:textSize="22sp" />
 
         <TextView
+            android:id="@+id/TextIsya"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/TextMaghrib"
+            android:layout_marginStart="100sp"
+            android:layout_marginTop="11sp"
+            android:text="Isya"
+            android:textColor="#737373"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/titleZakat"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_below="@id/JamIsya"
-            android:layout_marginTop="20dp"
-            android:text="Zakat"
-            android:textSize="50sp"
-            android:textColor="#000"
             android:layout_centerHorizontal="true"
-            android:id="@+id/titleZakat"
-            />
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="#737373"
+            android:textSize="50sp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Zakat Penghasilan"
-            android:textSize="25sp"
-            android:layout_below="@+id/titleZakat"
-            android:textColor="#000"
             android:id="@+id/titlezakatpeng"
-            />
-
-        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:ems="10"
-            android:hint="Masukkan Gaji"
-            android:textColorHint="#000"
-            android:textColor="#000"
-            android:id="@+id/inputgaji"
-            android:layout_below="@id/titlezakatpeng"
-            android:gravity="left"
-            />
+            android:layout_below="@+id/titleZakat"
+            android:layout_marginTop="13sp"
+            android:layout_marginStart="50sp"
+            android:text="Zakat Penghasilan"
+            android:textColor="#20ab23"
+            android:textSize="18sp" />
 
         <Button
+            android:id="@+id/inputjadwalgaji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/inputgaji"
-            android:layout_toRightOf="@+id/inputgaji"
-            android:layout_marginLeft="20dp"
             android:layout_below="@+id/titleZakat"
+            android:layout_alignTop="@+id/inputgaji"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/titlezakatpeng"
             android:text="Tanggal Gajian"
-            android:id="@+id/inputjadwalgaji"
             android:textSize="10sp"
 
             />
 
-        <TextView
+
+        <EditText
+            android:id="@+id/inputgaji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tulZakatpeng"
-            android:layout_marginLeft="10dp"
-            android:text="Deadline "
-            android:textSize="20sp"
-            android:id="@+id/tuldeadlinepeng"
-            android:layout_marginTop="10dp"
-            android:textColor="#000"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/hasilZakat"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:id="@+id/deadlinezakatpeng"
-            android:layout_below="@+id/tulZakatpeng"
-            android:layout_marginTop="10dp"
-            android:text="Isilah Tanggal"
-            />
+            android:layout_below="@id/titlezakatpeng"
+            android:layout_marginTop="0dp"
+            android:layout_alignLeft="@+id/titlezakatpeng"
+            android:layout_marginBottom="10dp"
+            android:ems="8"
+            android:hint="Masukkan Gaji"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@id/inputgaji"
-            android:textSize="20dp"
-            android:textColor="#000"
-            android:text="Per Bulan"
-            android:id="@+id/tulZakatpeng"
-
-            />
-
+        />
         <TextView
             android:id="@+id/hasilZakat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/inputgaji"
-            android:layout_toEndOf="@id/tulZakatpeng"
-            android:gravity="right"
+            android:layout_alignTop="@+id/tulZakatpeng"
+            android:layout_marginStart="227sp"
             android:text="Rp. 0"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/tuldeadlinepeng"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tulZakatpeng"
+            android:layout_alignLeft="@id/tulZakatpeng"
+            android:textColor="#ffffff"
+            android:text="Deadline"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/deadlinezakatpeng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tulZakatpeng"
+            android:layout_alignLeft="@+id/hasilZakat"
+            android:text="Isilah tanggal"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/tulZakatpeng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputgaji"
+            android:layout_alignLeft="@+id/titlezakatpeng"
+            android:layout_marginRight="40dp"
+            android:text="Per Bulan"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+
+            />
+
+
+
+        <TextView
+            android:id="@+id/zakpertah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tuldeadlinepeng"
+            android:layout_marginStart="50sp"
             android:text="Per Tahun"
-            android:layout_below="@id/tuldeadlinepeng"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:id="@+id/zakpertah"/>
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/hasilZakattah"
@@ -260,95 +272,93 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/deadlinezakatpeng"
             android:layout_alignLeft="@+id/deadlinezakatpeng"
-            android:layout_alignBottom="@id/zakpertah"
             android:layout_alignTop="@+id/zakpertah"
+            android:layout_alignBottom="@id/zakpertah"
             android:layout_toEndOf="@id/zakpertah"
             android:gravity="right"
             android:text="Rp. 0"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/deadlinezakatpengtah"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/zakpertah"
+            android:layout_marginStart="50sp"
+            android:layout_marginTop="2sp"
             android:text="Deadline"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:id="@+id/deadlinezakatpengtah"/>
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/deadlinezakatpengtahnilai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/inputgaji"
             android:layout_alignLeft="@+id/hasilZakat"
-            android:textSize="20sp"
-            android:textColor="#000"
-            android:id="@+id/deadlinezakatpengtahnilai"
             android:layout_alignTop="@+id/deadlinezakatpengtah"
             android:layout_alignBottom="@+id/deadlinezakatpengtah"
-            android:layout_below="@+id/tulZakatpeng"
             android:text="Isilah Tanggal"
-            />
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/titlezakatfit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Zakat Fitrah"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="5dp"
-            android:textSize="25sp"
             android:layout_below="@+id/deadlinezakatpengtah"
-            android:textColor="#000"
-            android:id="@+id/titlezakatfit"/>
+            android:layout_marginStart="50sp"
+            android:layout_marginTop="18sp"
+            android:text="Zakat Fitrah"
+            android:textColor="#20ab23"
+            android:textSize="18sp" />
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/titlezakatfit"
-            android:hint="Jumlah Anggota Keluarga"
-            android:layout_marginTop="0dp"
-            android:textColorHint="#000"
             android:id="@+id/inputbankeluarga"
-            android:layout_marginBottom="10dp"
-
-            />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/inputbankeluarga"
-            android:text="Zakat Fitrah"
-            android:textSize="20dp"
-            android:textColor="#000"
+            android:layout_below="@id/titlezakatfit"
+            android:layout_alignLeft="@+id/titlezakatfit"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="100dp"
+            android:hint="Jumlah Anggota Keluarga"
+            android:textColorHint="#ffffff"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
             />
 
+
         <TextView
+            android:id="@+id/outfitrahliter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/deadlinezakatpengtah"
+            android:layout_alignTop="@+id/titlezakatfit"
+            android:layout_marginTop="20dp"
             android:layout_alignLeft="@id/hasilZakat"
             android:text="3.5 Liter"
-            android:textColor="#000"
-            android:layout_below="@id/inputbankeluarga"
-            android:textSize="20dp"
-            android:id="@+id/outfitrahliter"/>
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
 
         <TextView
+            android:id="@+id/outfitrahkilo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/outfitrahliter"
             android:layout_below="@id/outfitrahliter"
+            android:layout_alignLeft="@+id/outfitrahliter"
+            android:layout_marginTop="0sp"
+            android:layout_marginBottom="20sp"
             android:text="2.7 Kilogram"
-            android:textSize="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/outfitrahkilo"
-            android:textColor="#000"/>
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+
 
     </RelativeLayout>
 
 
 </ScrollView>
+
+</RelativeLayout>
+

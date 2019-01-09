@@ -19,13 +19,10 @@ public class DownloadUrl {
         try {
             URL url = new URL(strUrl);
 
-            // Creating an http connection to communicate with url
             urlConnection = (HttpURLConnection) url.openConnection();
 
-            // Connecting to url
             urlConnection.connect();
 
-            // Reading data from url
             iStream = urlConnection.getInputStream();
 
             BufferedReader br = new BufferedReader(new InputStreamReader(iStream));

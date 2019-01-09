@@ -9,12 +9,14 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView jamsubuh = findViewById(R.id.Jamsubuh);
@@ -152,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init(){
-        Button btnMap = (Button) findViewById(R.id.MapBtn);
+        TextView btnMap = findViewById(R.id.MapBtn);
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,12 +175,12 @@ public class MainActivity extends AppCompatActivity {
         int available = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(MainActivity.this);
 
         if(available == ConnectionResult.SUCCESS){
-            //everything is fine and the user can make map requests
+
             Log.d(TAG, "isServicesOK: Google Play Services is working");
             return true;
         }
         else if(GoogleApiAvailability.getInstance().isUserResolvableError(available)){
-            //an error occured but we can resolve it
+
             Log.d(TAG, "isServicesOK: an error occured but we can fix it");
             Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(MainActivity.this, available, ERROR_DIALOG_REQUEST);
             dialog.show();
@@ -221,8 +226,6 @@ public class MainActivity extends AppCompatActivity {
                     tampildeadlinepeng.setText(akded);
 
                     zakatpengtahded.setText(akdeeed);
-
-                    //Deadlinepeng harus dimasukkin ke firebase
 
                 }
             };
